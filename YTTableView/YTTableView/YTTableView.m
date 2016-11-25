@@ -276,7 +276,7 @@ static const CGFloat KMenuItemWidth = 60;
                     return;
                 }
                 
-                if (pt.x-self.startPoint.x < 0 && abs(pt.x-self.startPoint.x) > self.menuItemWidth)
+                if (pt.x-self.startPoint.x < 0 && fabs(pt.x-self.startPoint.x) > self.menuItemWidth)
                 {
                     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                         self.slideCell.frame = CGRectMake(self.bounds.origin.x-self.menuView.frame.size.width, self.slideCell.frame.origin.y, self.slideCell.frame.size.width, self.slideCell.frame.size.height);
